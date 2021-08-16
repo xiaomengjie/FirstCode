@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.firstcode">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FirstCode">
+        <activity
+            android:name=".chapter4.recyclerview.RecyclerViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter4.listview.ListViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter3.launchmode.SingleInstanceActivity"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".chapter3.launchmode.SingleTaskActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".chapter3.launchmode.SingleTopActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".chapter3.launchmode.StandardActivity"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name=".chapter3.launchmode.LaunchModeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter3.lifecycle.NormalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter3.lifecycle.DialogActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".chapter3.lifecycle.LifecycleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter3.intent.DataActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter3.intent.BrowserActivity"
+            android:exported="true">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chapter3.intent.IntentActivity"
+            android:exported="true"
+            android:label="IntentActivity">
+            <intent-filter>
+                <action android:name="${applicationId}.action" />
+
+                <category android:name="${applicationId}.category" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chapter4.FourActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

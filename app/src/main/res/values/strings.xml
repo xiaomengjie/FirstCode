@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FirstCode</string>
+    <string name="show_toast">show_toast</string>
+    <string name="remove">remove</string>
+    <string name="add">add</string>
+    <string name="finish_activity">finish_activity</string>
+    <string name="intent_activity">intent_activity</string>
+    <string name="intent_browser">intent_browser</string>
+    <string name="intent_data">intent_data</string>
+    <string name="intent_data_result">intent_data_result</string>
+    <string name="to_normal_activity">to_normal_activity</string>
+    <string name="to_dialog_activity">to_dialog_activity</string>
+    <string name="lifecycle_activity">lifecycle_activity</string>
+    <string name="launch_mode">launch_mode</string>
+    <string name="standard">standard</string>
+    <string name="singleTop">singleTop</string>
+    <string name="singleTask">singleTask</string>
+    <string name="singleInstance">singleInstance</string>
+    <string name="intent">intent</string>
+    <string name="this_is_textview">This is TextView</string>
+    <string name="button">button</string>
+    <string name="hint">Type something here</string>
+    <string name="back">Back</string>
+    <string name="title_text">Title Text</string>
+    <string name="edit">Edit</string>
+    <string name="list_view_activity">list_view_activity</string>
+    <string name="recycler_view_activity">recycler_view_activity</string>
+</resources>

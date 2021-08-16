@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter3.launchmode.LaunchModeActivity">
+
+    <Button
+        android:id="@+id/standard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/singleTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/singleTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standard"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/singleTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/singleTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleTop"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/singleInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/singleInstance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleTask"
+        android:textAllCaps="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter3.ThirdActivity">
+
+    <Button
+        android:id="@+id/showToast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/show_toast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/finishActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/finish_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showToast"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/intentActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finishActivity"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/intentBrowser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_browser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentActivity"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/intentData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentBrowser"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/intentDataResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_data_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentData"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/lifecycleActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lifecycle_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intentDataResult"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/launchMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/launch_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lifecycleActivity"
+        android:textAllCaps="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
