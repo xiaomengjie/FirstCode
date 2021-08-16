@@ -1,4 +1,4 @@
-package com.example.firstcode.chapter4.recyclerview
+package com.example.firstcode.chapter4.recyclerview.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.firstcode.R
 import com.example.firstcode.chapter4.listview.FruitBean
 
-class HorizontalFruitAdapter(private val fruitList: List<FruitBean>): RecyclerView.Adapter<HorizontalFruitAdapter.ViewHolder>() {
+class VerticalFruitAdapter(private val fruitList: List<FruitBean>): RecyclerView.Adapter<VerticalFruitAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val fruitImage: ImageView = view.findViewById(R.id.fruitImage)
@@ -17,7 +17,7 @@ class HorizontalFruitAdapter(private val fruitList: List<FruitBean>): RecyclerVi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fruit_item_horizontal, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.fruit_item_vertical, parent, false)
         return ViewHolder(view)
     }
 

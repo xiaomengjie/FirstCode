@@ -1,12 +1,11 @@
 package com.example.firstcode.chapter4.recyclerview
 
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.firstcode.R
 import com.example.firstcode.chapter4.listview.FruitBean
+import com.example.firstcode.chapter4.recyclerview.adapter.StaggeredGridFruitAdapter
 import com.example.firstcode.other.BaseActivity
 import java.lang.StringBuilder
 
