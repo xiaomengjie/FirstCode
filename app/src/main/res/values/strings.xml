@@ -25,4 +25,6 @@
     <string name="edit">Edit</string>
     <string name="list_view_activity">list_view_activity</string>
     <string name="recycler_view_activity">recycler_view_activity</string>
+    <string name="chat_activity">chat_activity</string>
+    <string name="send">send</string>
 </resources>

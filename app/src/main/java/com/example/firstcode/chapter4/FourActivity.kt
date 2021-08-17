@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.example.firstcode.R
+import com.example.firstcode.chapter4.chat.ChatActivity
 import com.example.firstcode.chapter4.listview.ListViewActivity
 import com.example.firstcode.chapter4.recyclerview.RecyclerViewActivity
 import com.example.firstcode.other.actionStart
@@ -52,6 +53,9 @@ class FourActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.recycler_view_activity).setOnClickListener {
             actionStart(this, RecyclerViewActivity::class.java)
+        }
+        findViewById<Button>(R.id.chat_activity).setOnClickListener {
+            actionStart(this, ChatActivity::class.java)
         }
     }
 }

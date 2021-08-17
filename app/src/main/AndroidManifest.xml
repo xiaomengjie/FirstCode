@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter4.chat.ChatActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter4.recyclerview.RecyclerViewActivity"
             android:exported="true" />
         <activity

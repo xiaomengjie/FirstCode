@@ -1,23 +1,15 @@
 package com.example.firstcode.other
 
+sealed class Parent(val name: String)
+
+class SonOne: Parent("one")
+
+class SonTwo: Parent("two")
+
+fun getName(parent: Parent) = when(parent){
+    is SonOne -> "one"
+    is SonTwo -> "two"
+}
+
 fun main() {
-    /**
-     * 静态方法
-     */
-    show()
-    Sample.show()
-    Single.show()
-}
-
-fun show(){}
-
-class Sample {
-    companion object{
-        @JvmStatic
-        fun show(){}
-    }
-}
-
-object Single{
-    fun show(){}
 }

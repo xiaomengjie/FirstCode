@@ -164,4 +164,10 @@
         android:layout_height="wrap_content"
         android:text="@string/recycler_view_activity"
         android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/chat_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_activity"
+        android:textAllCaps="false"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
