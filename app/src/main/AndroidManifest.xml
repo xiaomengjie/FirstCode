@@ -74,7 +74,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chapter4.FourActivity"
+            android:name=".chapter5.FiveActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
