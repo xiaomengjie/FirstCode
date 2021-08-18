@@ -13,3 +13,5 @@ fun <T: Activity> actionStart(context: Context, clazz: Class<T>){
 fun showToast(context: Context, msg: String){
     Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
 }
+
+operator fun String.times(n: Int) = repeat(n)

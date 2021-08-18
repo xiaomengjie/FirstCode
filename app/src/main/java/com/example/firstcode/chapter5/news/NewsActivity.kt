@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstcode.R
-import com.example.firstcode.other.actionStart
-import java.lang.StringBuilder
+import com.example.firstcode.other.times
 
 class NewsActivity : AppCompatActivity() {
 
@@ -42,11 +41,5 @@ class NewsActivity : AppCompatActivity() {
         return newsList
     }
 
-    private fun getRandomLengthString(content: String): String{
-        val n = (1 .. 20).random()
-        return StringBuilder().let { builder ->
-            repeat(n){builder.append(content)}
-            builder.toString()
-        }
-    }
+    private fun getRandomLengthString(content: String): String = content * (1..20).random()
 }
