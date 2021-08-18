@@ -12,7 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
- 
+
+        <activity
+            android:name=".chapter6.offline.LoginSuccessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter6.offline.LoginActivity"
+            android:exported="true" />
         <activity
             android:name=".chapter6.send.SendBroadcastActivity"
             android:exported="true" />

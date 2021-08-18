@@ -25,4 +25,14 @@
         app:layout_constraintTop_toBottomOf="@id/dynamicRegisterBroadcastReceiver"
         android:text="@string/send_broadcast"
         android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/forceOffline"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sendBroadcast"
+        android:text="@string/force_offline"
+        android:textAllCaps="false"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
