@@ -7,13 +7,13 @@ import android.os.Bundle
 import com.example.firstcode.R
 import com.example.firstcode.chapter6.receiver.TimeChangeReceiver
 
-class StaticRegisterActivity : AppCompatActivity() {
+class DynamicRegisterActivity : AppCompatActivity() {
 
     private val timeChangeReceiver: TimeChangeReceiver by lazy { TimeChangeReceiver() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_static_register)
+        setContentView(R.layout.activity_dynamic_register)
 
         val intentFilter = IntentFilter()
         intentFilter.addAction(Intent.ACTION_TIME_TICK)

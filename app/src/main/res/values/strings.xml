@@ -34,5 +34,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="remove_fragment">remove fragment</string>
     <string name="news_activity">news activity</string>
-    <string name="static_register_broadcastReceiver">static register BroadcastReceiver</string>
+    <string name="dynamic_register_broadcastReceiver">dynamic register BroadcastReceiver</string>
+    <string name="send_broadcast">send broadcast</string>
+    <string name="send_standard">send standard</string>
+    <string name="send_ordered">send ordered</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

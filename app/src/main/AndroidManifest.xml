@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.firstcode">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
+ 
         <activity
-            android:name=".chapter6.register.StaticRegisterActivity"
+            android:name=".chapter6.send.SendBroadcastActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter6.register.DynamicRegisterActivity"
             android:exported="true" />
         <activity
             android:name=".chapter5.news.NewsActivity"
@@ -91,6 +97,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".chapter6.receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".chapter6.receiver.StandardReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="${applicationId}.standard" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".chapter6.receiver.OrderedOneReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="${applicationId}.ordered" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".chapter6.receiver.OrderedTwoReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="${applicationId}.ordered" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
