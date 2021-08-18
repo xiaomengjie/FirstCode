@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter5.news.NewsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter5.news.NewsContentActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter4.chat.ChatActivity"
             android:exported="true" />
         <activity

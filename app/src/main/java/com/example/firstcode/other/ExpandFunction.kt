@@ -3,6 +3,7 @@ package com.example.firstcode.other
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.widget.Toast
 
 fun <T: Activity> actionStart(context: Context, clazz: Class<T>){

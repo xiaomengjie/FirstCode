@@ -27,4 +27,11 @@
     <string name="recycler_view_activity">recycler_view_activity</string>
     <string name="chat_activity">chat_activity</string>
     <string name="send">send</string>
+    <string name="this_is_static_fragment">this is static fragment</string>
+    <string name="this_is_dynamic_fragment">this is dynamic fragment</string>
+    <string name="add_fragment">add_fragment</string>
+    <string name="lifecycle_fragment">lifecycle fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="remove_fragment">remove fragment</string>
+    <string name="news_activity">news activity</string>
 </resources>
