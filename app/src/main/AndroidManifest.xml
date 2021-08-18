@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter6.register.StaticRegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter5.news.NewsActivity"
             android:exported="true" />
         <activity
@@ -80,7 +83,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chapter5.FiveActivity"
+            android:name=".chapter6.BroadcastReceiverPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

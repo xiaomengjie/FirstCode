@@ -14,10 +14,10 @@ import com.example.firstcode.chapter3.intent.DataActivity
 import com.example.firstcode.chapter3.launchmode.LaunchModeActivity
 import com.example.firstcode.chapter3.lifecycle.LifecycleActivity
 
-class ThirdActivity : BaseActivity() {
+class ActivityPracticeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_third)
+        setContentView(R.layout.activity_activity_practice)
         savedInstanceState?.getString("data")
 
         val toast = findViewById<Button>(R.id.showToast)
@@ -108,7 +108,7 @@ class ThirdActivity : BaseActivity() {
 
     companion object{
         private fun actionStart(context: Context, name: String, age: Int){
-            context.startActivity(Intent(context, ThirdActivity::class.java).apply {
+            context.startActivity(Intent(context, ActivityPracticeActivity::class.java).apply {
                 putExtra("name", name)
                 putExtra("age", age)
             })

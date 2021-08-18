@@ -10,10 +10,10 @@ import com.example.firstcode.chapter4.listview.ListViewActivity
 import com.example.firstcode.chapter4.recyclerview.RecyclerViewActivity
 import com.example.firstcode.other.actionStart
 
-class FourActivity : AppCompatActivity() {
+class LayoutPracticeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_four)
+        setContentView(R.layout.activity_layout_practice)
 
 //        val edit = findViewById<EditText>(R.id.text)
 //        findViewById<Button>(R.id.button).setOnClickListener {

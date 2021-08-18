@@ -10,13 +10,13 @@ import com.example.firstcode.chapter5.lifecycle.LifecycleFragment
 import com.example.firstcode.chapter5.news.NewsActivity
 import com.example.firstcode.other.BaseActivity
 
-class FiveActivity : BaseActivity() {
+class FragmentPracticeActivity : BaseActivity() {
 
     private val lifecycleFragment by lazy { LifecycleFragment() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_five)
+        setContentView(R.layout.activity_fragment_practice)
         findViewById<Button>(R.id.add_fragment).setOnClickListener {
             replaceFragment(DynamicFragment())
         }
