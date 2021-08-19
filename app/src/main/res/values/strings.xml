@@ -53,4 +53,9 @@
     <string name="send_force_online_broadcast">Send force online broadcast</string>
     <string name="login_success">login success</string>
     <string name="force_offline">force offline</string>
+    <string name="file_storage">file storage</string>
+    <string name="save_to_file">save to file</string>
+    <string name="shared_preferences">shared preferences</string>
+    <string name="put_to_sp">put to sp</string>
+    <string name="get_from_sp">get from sp</string>
 </resources>

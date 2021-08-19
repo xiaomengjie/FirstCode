@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
-
+        <activity
+            android:name=".chapter7.sp.SharedPreferencesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter7.file.FileStorageActivity"
+            android:exported="true" />
         <activity
             android:name=".chapter6.offline.LoginSuccessActivity"
             android:exported="true" />
@@ -95,7 +100,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chapter6.BroadcastReceiverPracticeActivity"
+            android:name=".chapter7.DataStoragePracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
