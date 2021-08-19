@@ -58,4 +58,8 @@
     <string name="shared_preferences">shared preferences</string>
     <string name="put_to_sp">put to sp</string>
     <string name="get_from_sp">get from sp</string>
+    <string name="input_save_content">input save content</string>
+    <string name="please_type_password">please type password</string>
+    <string name="please_type_account">please type account</string>
+    <string name="remember_password">remember password</string>
 </resources>

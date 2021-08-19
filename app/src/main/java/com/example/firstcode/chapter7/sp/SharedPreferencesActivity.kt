@@ -43,14 +43,14 @@ class SharedPreferencesActivity : BaseActivity() {
     private fun saveToSp() {
         //1、获取SP对象
         val sharedPreferences = getSharedPreferences(CONTEXT)
-        //2、获取edit对象
-        val edit = sharedPreferences.edit()
+        //2、获取editor对象
+        val editor = sharedPreferences.edit()
         //3、调用对应方法设置数据
-        edit.putString(NAME, "xiao")
-        edit.putInt(AGE, 28)
-        edit.putBoolean(MARRIED, false)
+        editor.putString(NAME, "xiao")
+        editor.putInt(AGE, 28)
+        editor.putBoolean(MARRIED, false)
         //4、数据提交，完成存储
-        edit.apply()
+        editor.apply()
         showToast(this, "save success")
     }
 

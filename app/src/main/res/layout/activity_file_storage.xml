@@ -13,7 +13,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:hint="@string/input_save_content"/>
 
     <Button
         android:id="@+id/save"
