@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter7.database.DatabaseActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter7.sp.SharedPreferencesActivity"
             android:exported="true" />
         <activity
