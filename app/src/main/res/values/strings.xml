@@ -62,4 +62,10 @@
     <string name="please_type_password">please type password</string>
     <string name="please_type_account">please type account</string>
     <string name="remember_password">remember password</string>
+    <string name="database">database</string>
+    <string name="create_database">create database</string>
+    <string name="add_data">add data</string>
+    <string name="delete_data">delete data</string>
+    <string name="update_data">update data</string>
+    <string name="query_data">query data</string>
 </resources>
