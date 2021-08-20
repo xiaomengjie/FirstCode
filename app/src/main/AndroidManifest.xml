@@ -4,6 +4,8 @@
     package="com.example.firstcode">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -12,6 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
+        <activity
+            android:name=".chapter8.contentprovider.ContentProviderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter8.permission.RuntimePermissionActivity"
+            android:exported="true" />
         <activity
             android:name=".chapter7.database.DatabaseActivity"
             android:exported="true" />
@@ -103,7 +111,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chapter7.DataStoragePracticeActivity"
+            android:name=".chapter8.ContentProviderPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

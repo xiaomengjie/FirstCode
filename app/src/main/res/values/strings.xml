@@ -73,4 +73,8 @@
     <string name="update_data_use_sql">update data use sql</string>
     <string name="query_data_use_sql">query data use sql</string>
     <string name="use_transaction">use transaction</string>
+    <string name="runtime_permission">runtime permission</string>
+    <string name="make_call">make call</string>
+    <string name="contact">contact</string>
+    <string name="query_contact">query contact</string>
 </resources>
