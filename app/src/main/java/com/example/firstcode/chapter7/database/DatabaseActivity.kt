@@ -1,14 +1,12 @@
 package com.example.firstcode.chapter7.database
 
 import android.content.ContentValues
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.example.firstcode.R
 import com.example.firstcode.other.BaseActivity
 import com.example.firstcode.other.showToast
-import java.lang.NullPointerException
 
 class DatabaseActivity : BaseActivity() {
 
