@@ -64,8 +64,13 @@
     <string name="remember_password">remember password</string>
     <string name="database">database</string>
     <string name="create_database">create database</string>
-    <string name="add_data">add data</string>
+    <string name="insert_data">insert data</string>
     <string name="delete_data">delete data</string>
     <string name="update_data">update data</string>
     <string name="query_data">query data</string>
+    <string name="insert_data_use_sql">insert data use sql</string>
+    <string name="delete_data_use_sql">delete data use sql</string>
+    <string name="update_data_use_sql">update data use sql</string>
+    <string name="query_data_use_sql">query data use sql</string>
+    <string name="use_transaction">use transaction</string>
 </resources>
