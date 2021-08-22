@@ -77,4 +77,15 @@
     <string name="make_call">make call</string>
     <string name="contact">contact</string>
     <string name="query_contact">query contact</string>
+    <string name="notification">notification</string>
+    <string name="send_notice">send notice</string>
+    <string name="this_is_notification_layout">This is notification layout</string>
+    <string name="send_notice_with_intent">send notice with intent</string>
+    <string name="send_notice_with_cancel">send notice with cancel</string>
+    <string name="send_notice_with_long_text">send notice with long text</string>
+    <string name="send_notice_with_big_picture">send notice with big picture</string>
+    <string name="send_notice_with_important">send notice with important</string>
+    <string name="camera">camera</string>
+    <string name="take_photo">take photo</string>
+    <string name="pick_from_photo_album">pick from photo album</string>
 </resources>

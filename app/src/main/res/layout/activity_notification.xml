@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter9.notification.NotificationActivity">
+
+    <Button
+        android:id="@+id/sendNotice"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendNoticeWithIntent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toBottomOf="@id/sendNotice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice_with_intent"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendNoticeWithCancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toBottomOf="@id/sendNoticeWithIntent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice_with_cancel"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendNoticeWithLongText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toBottomOf="@id/sendNoticeWithCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice_with_long_text"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendNoticeWithBigPicture"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toBottomOf="@id/sendNoticeWithLongText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice_with_big_picture"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendNoticeWithImportant"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_height_48"
+        app:layout_constraintTop_toBottomOf="@id/sendNoticeWithBigPicture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/send_notice_with_important"
+        android:textAllCaps="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
