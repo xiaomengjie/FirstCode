@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.firstcode.R
 import com.example.firstcode.chapter9.camera.CameraActivity
+import com.example.firstcode.chapter9.multimedia.MultimediaActivity
 import com.example.firstcode.chapter9.notification.NotificationActivity
 import com.example.firstcode.other.actionStart
 
@@ -19,6 +20,10 @@ class MultimediaPracticeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.camera).setOnClickListener {
             actionStart(this, CameraActivity::class.java)
+        }
+
+        findViewById<Button>(R.id.multimedia).setOnClickListener {
+            actionStart(this, MultimediaActivity::class.java)
         }
     }
 }

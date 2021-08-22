@@ -88,4 +88,11 @@
     <string name="camera">camera</string>
     <string name="take_photo">take photo</string>
     <string name="pick_from_photo_album">pick from photo album</string>
+    <string name="play_music">play music</string>
+    <string name="play_video">play video</string>
+    <string name="multimedia">multimedia</string>
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="stop">stop</string>
+    <string name="replay">replay</string>
 </resources>

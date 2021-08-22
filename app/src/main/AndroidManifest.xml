@@ -19,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter9.multimedia.PlayVideoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter9.multimedia.PlayMusicActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter9.multimedia.MultimediaActivity"
             android:exported="true" />
         <activity
