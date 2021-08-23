@@ -1,6 +1,9 @@
 package com.example.firstcode.chapter9.camera
 
+import android.Manifest
+import android.content.ContentUris
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
@@ -9,11 +12,14 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.DocumentsContract
+import android.provider.DocumentsProvider
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.firstcode.R
 import com.example.firstcode.other.BaseActivity
@@ -72,9 +78,18 @@ class CameraActivity : BaseActivity() {
             }
             PICK_FROM_PHOTO_ALBUM -> {
                 if (resultCode == RESULT_OK && data != null){
-                    data.data?.let {
-                        Log.e(TAG, "$it")
-                        phoneImageView.setImageBitmap(getBitmapFromUri(it))
+                    data.data?.let { uri ->
+                        Log.e(TAG, "$uri")
+                        phoneImageView.setImageBitmap(getBitmapFromUri(uri))
+
+                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+                            contentResolver.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, arrayOf(MediaStore.Images.Media.DATA),
+                                "${MediaStore.Images.ImageColumns._ID} = ?", arrayOf("26326"), null)?.use {
+                                    if (it.moveToFirst()){
+                                        Log.e(TAG, it.getString(it.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)))
+                                    }
+                            }
+                        }
                     }
                 }
             }
