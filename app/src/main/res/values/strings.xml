@@ -95,4 +95,13 @@
     <string name="pause">pause</string>
     <string name="stop">stop</string>
     <string name="replay">replay</string>
+    <string name="create_thread">create thread</string>
+    <string name="handle_message">handle message</string>
+    <string name="async_task">asyncTask</string>
+    <string name="service">service</string>
+    <string name="start_service">start service</string>
+    <string name="stop_service">stop service</string>
+    <string name="bind_service">bind service</string>
+    <string name="unbind_service">unbind service</string>
+    <string name="foreground">foreground</string>
 </resources>

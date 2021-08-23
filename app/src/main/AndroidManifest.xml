@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <queries>
         <provider android:authorities="com.example.customcontentprovider.provider" />
@@ -19,6 +20,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
+        <service
+            android:name=".chapter10.service.ForegroundService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".chapter10.service.CustomService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".chapter10.service.ServiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter10.thread.ThreadActivity"
+            android:exported="true" />
         <activity
             android:name=".chapter9.multimedia.PlayVideoActivity"
             android:exported="true" />
@@ -181,7 +197,7 @@
         </provider>
 
         <activity
-            android:name=".chapter9.MultimediaPracticeActivity"
+            android:name=".chapter10.ServicePracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
