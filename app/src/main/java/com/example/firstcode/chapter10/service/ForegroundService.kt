@@ -48,5 +48,6 @@ class ForegroundService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         Log.e(TAG, "onDestroy: ")
+        stopForeground(true)
     }
 }

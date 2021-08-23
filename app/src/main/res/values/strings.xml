@@ -103,5 +103,6 @@
     <string name="stop_service">stop service</string>
     <string name="bind_service">bind service</string>
     <string name="unbind_service">unbind service</string>
-    <string name="foreground">foreground</string>
+    <string name="start_foreground">start foreground</string>
+    <string name="stop_foreground">stop foreground</string>
 </resources>
