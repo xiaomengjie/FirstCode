@@ -20,7 +20,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FirstCode">
+        android:theme="@style/Theme.FirstCode"
+        android:networkSecurityConfig="@xml/network_config">
         <activity
             android:name=".chapter11.network.ParseActivity"
             android:exported="true" />
