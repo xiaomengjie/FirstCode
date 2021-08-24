@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
         <provider android:authorities="com.example.customcontentprovider.provider" />
@@ -20,10 +21,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
+        <activity
+            android:name=".chapter11.network.ParseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter11.network.NetworkActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter11.webview.WebViewActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".chapter10.service.CustomIntentService"
+            android:exported="false" />
         <service
             android:name=".chapter10.service.ForegroundService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service
             android:name=".chapter10.service.CustomService"
             android:enabled="true"
@@ -197,7 +211,7 @@
         </provider>
 
         <activity
-            android:name=".chapter10.ServicePracticeActivity"
+            android:name=".chapter11.InternetPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

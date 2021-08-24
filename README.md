@@ -7,3 +7,7 @@ ContentProvider：
 
 FileProvider的配置
     https://developer.android.google.cn/reference/androidx/core/content/FileProvider#GetUri
+
+Kotlin知识点
+    内联函数：https://rengwuxian.com/kotlin-source-noinline-crossinline/
+    泛型：https://rengwuxian.com/kotlin-generics/

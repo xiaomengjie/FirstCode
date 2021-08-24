@@ -54,5 +54,9 @@ class ServiceActivity : AppCompatActivity() {
         findViewById<Button>(R.id.stopForeground).setOnClickListener {
             stopService(Intent(this, ForegroundService::class.java))
         }
+
+        findViewById<Button>(R.id.startIntentService).setOnClickListener {
+            startService(Intent(this, CustomIntentService::class.java))
+        }
     }
 }

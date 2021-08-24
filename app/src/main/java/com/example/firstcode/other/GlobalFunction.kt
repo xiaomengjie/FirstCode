@@ -15,3 +15,9 @@ fun showToast(context: Context, msg: String){
 }
 
 operator fun String.times(n: Int) = repeat(n)
+
+infix fun Int.to(name: String) = ButtonBean(this, name)
+
+inline fun <reified T: Activity> startActivity(context: Context){
+    context.startActivity(Intent(context, T::class.java))
+}

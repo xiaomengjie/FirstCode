@@ -1,21 +1,45 @@
 package com.example.firstcode.other
 
+import kotlin.concurrent.thread
+
 fun main() {
     /**
-     * infix函数：Kotlin提供的一种语法糖，可以用简便方式调用此函数
-     * 自定义infix函数beginWith，它的调用方法是
-     * 限制：
-     *  1、infix必须是某个类的成员函数，可以使用扩展函数定义在某个类中
-     *  2、infix必须且只能接收一个参数
+     * 泛型的逆变：
+     *      泛型类Sample<T>，A是B的子类型，同时Sample<B>是Sample<A>的子类型
+     *      那么Sample在T这个泛型上是逆变的
+     * 如何支持逆变
+     *      泛型类型T用in修饰，此时T只能出现在输入位，支持逆变
      */
-    //通常函数调用
-    "data".beginWith("d")
-    //infix函数的调用
-    "data" beginWith "d"
+    val transformer = object : Transformer<Person>{
+        override fun transform(t: Person): String {
+            return t.name
+        }
+    }
+    handleTransformer(transformer)
 
-    listOf("data") has "data"
+    fill(arrayOfNulls<Person>(1), Teacher("Tom", 10))
 }
 
-infix fun String.beginWith(prefix: String) = startsWith(prefix, true)
+interface Transformer<in T>{
+    fun transform(t: T): String
+}
 
-infix fun <T> Collection<T>.has(element: T) = contains(element)
+fun handleTransformer(transformer: Transformer<Student>){
+    transformer.transform(Student("Tom", 19))
+}
+
+open class Person(val name: String, val age: Int)
+class Student(name: String, age: Int): Person(name, age)
+class Teacher(name: String, age: Int): Person(name, age)
+
+fun fill(array: Array<in Teacher>, teacher: Teacher){
+    array[0] = teacher
+}
+
+fun <T> copy(out: Array<out T>, put: Array<in T>){
+    out.forEachIndexed { index, t ->
+        put[index] = t
+    }
+}
+
+

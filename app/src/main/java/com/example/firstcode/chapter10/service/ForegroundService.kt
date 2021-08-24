@@ -9,6 +9,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.example.firstcode.R
+import kotlin.concurrent.thread
 
 class ForegroundService : Service() {
 
@@ -42,6 +43,10 @@ class ForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.e(TAG, "onStartCommand: ")
+        thread {
+            Thread.sleep(3000)
+            stopSelf()
+        }
         return super.onStartCommand(intent, flags, startId)
     }
 
