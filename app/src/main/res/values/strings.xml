@@ -112,4 +112,10 @@
     <string name="okhttp">okhttp</string>
     <string name="parse">xml parse</string>
     <string name="xml_parse_with_pull">xml parse with pull</string>
+    <string name="xml_parse_with_sax">xml parse with sax</string>
+    <string name="xml_parse_with_dom">xml parse with dom</string>
+    <string name="json_parse_with_jsonObject">json parse with jsonObject</string>
+    <string name="json_parse_with_gson">json parse with gson</string>
+    <string name="retrofit">retrofit</string>
+    <string name="get_app_data">get app data</string>
 </resources>

@@ -4,6 +4,7 @@ import android.view.View
 import com.example.firstcode.R
 import com.example.firstcode.chapter11.network.NetworkActivity
 import com.example.firstcode.chapter11.network.ParseActivity
+import com.example.firstcode.chapter11.retrofit.RetrofitActivity
 import com.example.firstcode.chapter11.webview.WebViewActivity
 import com.example.firstcode.other.*
 
@@ -21,7 +22,8 @@ class InternetPracticeActivity : BaseAbstractActivity() {
         return listOf(
             R.string.web_view to getString(R.string.web_view),
             R.string.network to getString(R.string.network),
-            R.string.parse to getString(R.string.parse)
+            R.string.parse to getString(R.string.parse),
+            R.string.retrofit to getString(R.string.retrofit)
         )
     }
 
@@ -35,6 +37,9 @@ class InternetPracticeActivity : BaseAbstractActivity() {
             }
             R.string.parse -> {
                 startActivity<ParseActivity>(this)
+            }
+            R.string.retrofit -> {
+                startActivity<RetrofitActivity>(this)
             }
         }
     }

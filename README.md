@@ -12,5 +12,6 @@ Kotlin知识点
     内联函数：https://rengwuxian.com/kotlin-source-noinline-crossinline/
     泛型：https://rengwuxian.com/kotlin-generics/
 
-网络安全配置
+网络安全配置：Android9.0开始，应用程序默认会使用HTTPS请求，为了让程序能使用HTTP，需要如下配置
+
     https://developer.android.google.cn/training/articles/security-config
