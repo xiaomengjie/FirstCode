@@ -4,14 +4,8 @@ import android.util.Log
 import android.view.View
 import com.example.firstcode.R
 import com.example.firstcode.chapter11.network.NodeBean
-import com.example.firstcode.other.BaseAbstractActivity
-import com.example.firstcode.other.ButtonBean
-import com.example.firstcode.other.ButtonListLayout
-import com.example.firstcode.other.to
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
+import com.example.firstcode.other.*
+import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitActivity : BaseAbstractActivity() {
@@ -55,4 +49,6 @@ class RetrofitActivity : BaseAbstractActivity() {
             }
         })
     }
+
+    suspend fun getAppData() = ServiceCreator.create<AppService>().getAppData().customAwait()
 }

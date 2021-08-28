@@ -1,44 +1,90 @@
 package com.example.firstcode.other
 
-import kotlin.concurrent.thread
+import com.example.firstcode.chapter11.HttpCallbackListener
+import com.example.firstcode.chapter11.HttpUtil
+import kotlinx.coroutines.*
+import java.lang.Exception
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+import kotlin.coroutines.suspendCoroutine
 
 fun main() {
-    /**
-     * 泛型的逆变：
-     *      泛型类Sample<T>，A是B的子类型，同时Sample<B>是Sample<A>的子类型
-     *      那么Sample在T这个泛型上是逆变的
-     * 如何支持逆变
-     *      泛型类型T用in修饰，此时T只能出现在输入位，支持逆变
-     */
-    val transformer = object : Transformer<Person>{
-        override fun transform(t: Person): String {
-            return t.name
+
+    //开启协程
+    //GlobalScope.launch 顶层协程，程序运行结束时，协程也会一起结束
+    //主线程休眠1秒再结束，此时顶层协程也会结束，无论协程代码是否执行完毕
+    GlobalScope.launch {
+        println("codes run in coroutine scope")
+        // delay 非阻塞式挂起函数
+        delay(1500)
+        println("codes run in coroutine scope finished")
+    }
+
+    Thread.sleep(1000)
+
+    //runBlocking，创建的协程作用域保证：在协程作用域内的代码和子协程没有运行完之前
+    //             一直阻塞当前线程
+    runBlocking {
+        println("codes run in coroutine scope")
+        // delay 非阻塞式挂起函数
+        delay(1500)
+        println("codes run in coroutine scope finished")
+    }
+
+    //创建多个协程launch函数
+    runBlocking {
+        launch {
+            println("launch1")
+            delay(1000)
+            println("launch1 finished")
+        }
+
+        launch {
+            println("launch2")
+            delay(1000)
+            println("launch2 finished")
         }
     }
-    handleTransformer(transformer)
 
-    fill(arrayOfNulls<Person>(1), Teacher("Tom", 10))
+    //取消所有协程协程
+    val job = Job()
+    val scope = CoroutineScope(job)
+    scope.launch {
+
+    }
+    job.cancel()
+
+    //获取协程返回值 async
+    runBlocking {
+        val result = async { 5 + 5 }.await()
+        println(result)
+
+        withContext(Dispatchers.Default){
+            5 + 5
+        }
+    }
 }
 
-interface Transformer<in T>{
-    fun transform(t: T): String
+//声明挂起函数：suspend
+suspend fun printDot() = coroutineScope {
+    launch {
+        println(".")
+        delay(1000)
+    }
 }
 
-fun handleTransformer(transformer: Transformer<Student>){
-    transformer.transform(Student("Tom", 19))
-}
+suspend fun request(url: String): String{
+    return suspendCoroutine {
+        HttpUtil.sendRequestWithHttpURLConnection(url, object : HttpCallbackListener{
+            override fun onFinish(response: String) {
+                it.resume(response)
+            }
 
-open class Person(val name: String, val age: Int)
-class Student(name: String, age: Int): Person(name, age)
-class Teacher(name: String, age: Int): Person(name, age)
+            override fun onError(exception: Exception) {
+                it.resumeWithException(exception)
+            }
 
-fun fill(array: Array<in Teacher>, teacher: Teacher){
-    array[0] = teacher
-}
-
-fun <T> copy(out: Array<out T>, put: Array<in T>){
-    out.forEachIndexed { index, t ->
-        put[index] = t
+        })
     }
 }
 
