@@ -23,9 +23,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter13.livedata.LiveDataActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter13.lifecycle.LifecycleObserverActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chapter13.viewmodel.ViewModelActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter12.FruitActivity"
             android:exported="true"
-            android:theme="@style/Theme.FirstCode.FruitActivityTheme"/>
+            android:theme="@style/Theme.FirstCode.FruitActivityTheme" />
         <activity
             android:name=".chapter12.MaterialDesignActivity"
             android:exported="true"
@@ -224,7 +233,7 @@
         </provider>
 
         <activity
-            android:name=".chapter12.MaterialDesignPracticeActivity"
+            android:name=".chapter13.JetpackPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

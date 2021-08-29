@@ -129,4 +129,11 @@
     <string name="task">task</string>
     <string name="material_design">material design</string>
     <string name="check">check</string>
+    <string name="view_model">viewModel</string>
+    <string name="plus_one">Plus One</string>
+    <string name="clear_text">clear text</string>
+    <string name="lifecycle">lifecycle</string>
+    <string name="live_data">liveData</string>
+    <string name="map">map</string>
+    <string name="switchMap">switchMap</string>
 </resources>
