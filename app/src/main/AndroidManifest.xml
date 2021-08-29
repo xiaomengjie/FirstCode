@@ -23,6 +23,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter12.FruitActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FirstCode.FruitActivityTheme"/>
+        <activity
+            android:name=".chapter12.MaterialDesignActivity"
+            android:exported="true"
+            android:label="MaterialDesign"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
             android:name=".chapter11.retrofit.RetrofitActivity"
             android:exported="true" />
         <activity
@@ -215,7 +224,7 @@
         </provider>
 
         <activity
-            android:name=".chapter11.InternetPracticeActivity"
+            android:name=".chapter12.MaterialDesignPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

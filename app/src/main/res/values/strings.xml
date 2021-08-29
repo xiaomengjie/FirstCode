@@ -118,4 +118,15 @@
     <string name="json_parse_with_gson">json parse with gson</string>
     <string name="retrofit">retrofit</string>
     <string name="get_app_data">get app data</string>
+    <string name="backup">BackUp</string>
+    <string name="delete">delete</string>
+    <string name="settings">settings</string>
+    <string name="this_is_menu">This is menu</string>
+    <string name="call">Call</string>
+    <string name="friends">friends</string>
+    <string name="location">location</string>
+    <string name="mail">mail</string>
+    <string name="task">task</string>
+    <string name="material_design">material design</string>
+    <string name="check">check</string>
 </resources>
