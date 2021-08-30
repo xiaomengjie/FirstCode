@@ -9,8 +9,6 @@ import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.ViewModelProvider
 import com.example.firstcode.R
-import com.example.firstcode.chapter13.viewmodel.DataViewModel
-import com.example.firstcode.chapter13.viewmodel.DataViewModelFactory
 
 class LiveDataActivity : AppCompatActivity() {
 

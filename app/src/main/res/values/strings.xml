@@ -136,4 +136,5 @@
     <string name="live_data">liveData</string>
     <string name="map">map</string>
     <string name="switchMap">switchMap</string>
+    <string name="room">room</string>
 </resources>
