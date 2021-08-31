@@ -26,7 +26,10 @@ abstract class BaseAbstractActivity: AppCompatActivity() {
         buttonListLayout?.setData(buttonBeanList){
             onClickListener(it)
         }
+        initView()
     }
+
+    open fun initView() {}
 
     protected abstract fun getViewLayout(): Int
 

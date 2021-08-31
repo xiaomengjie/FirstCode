@@ -6,6 +6,7 @@ import com.example.firstcode.chapter13.lifecycle.LifecycleObserverActivity
 import com.example.firstcode.chapter13.livedata.LiveDataActivity
 import com.example.firstcode.chapter13.room.RoomActivity
 import com.example.firstcode.chapter13.viewmodel.ViewModelActivity
+import com.example.firstcode.chapter13.workmanager.WorkManagerActivity
 import com.example.firstcode.other.*
 
 class JetpackPracticeActivity : BaseAbstractActivity() {
@@ -23,7 +24,8 @@ class JetpackPracticeActivity : BaseAbstractActivity() {
             R.string.view_model to getString(R.string.view_model),
             R.string.lifecycle to getString(R.string.lifecycle),
             R.string.live_data to getString(R.string.live_data),
-            R.string.room to getString(R.string.room)
+            R.string.room to getString(R.string.room),
+            R.string.workManager to getString(R.string.workManager)
         )
     }
 
@@ -40,6 +42,9 @@ class JetpackPracticeActivity : BaseAbstractActivity() {
             }
             R.string.room -> {
                 startActivity<RoomActivity>(this)
+            }
+            R.string.workManager -> {
+                startActivity<WorkManagerActivity>(this)
             }
         }
     }

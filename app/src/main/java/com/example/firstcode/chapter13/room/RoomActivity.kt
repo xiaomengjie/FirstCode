@@ -1,13 +1,8 @@
 package com.example.firstcode.chapter13.room
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.example.firstcode.R
-import com.example.firstcode.chapter13.lifecycle.LifecycleObserverActivity
-import com.example.firstcode.chapter13.livedata.LiveDataActivity
-import com.example.firstcode.chapter13.viewmodel.ViewModelActivity
 import com.example.firstcode.other.*
 import kotlin.concurrent.thread
 
@@ -31,7 +26,7 @@ class RoomActivity : BaseAbstractActivity() {
             R.string.query_data to getString(R.string.query_data),
             R.string.delete_data to getString(R.string.delete_data),
             R.string.update_data to getString(R.string.update_data),
-            R.string.delete_data_use_sql to getString(R.string.delete_data_use_sql)
+            R.string.delete_all_data to getString(R.string.delete_all_data)
         )
     }
 
@@ -42,8 +37,10 @@ class RoomActivity : BaseAbstractActivity() {
         when(view.id){
             R.string.insert_data -> {
                 thread {
-                    personDao.insertPerson(personOne)
-                    personDao.insertPerson(personTwo)
+                    // TODO: 2021/8/31 将插入数据返回的主键id赋值给原来的Person对象
+                    //  因为使用Update和Delete注解去更新和删除数据都是基于id来操作的
+                    personOne.id = personDao.insertPerson(personOne)
+                    personTwo.id = personDao.insertPerson(personTwo)
                 }
             }
             R.string.query_data -> {
@@ -64,7 +61,7 @@ class RoomActivity : BaseAbstractActivity() {
                     personDao.updatePerson(personTwo)
                 }
             }
-            R.string.delete_data_use_sql -> {
+            R.string.delete_all_data -> {
                 thread {
                     personDao.deleteAllPerson()
                 }

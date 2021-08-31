@@ -9,7 +9,6 @@ interface PersonDao {
     @Insert
     fun insertPerson(person: Person): Long
 
-    // TODO: 2021/8/31 与添加时的bean要为同一个
     @Update
     fun updatePerson(newPerson: Person)
 
@@ -21,7 +20,6 @@ interface PersonDao {
     @Query("select * from Person where age > :age")
     fun loadPersonOlderThan(age: Int): List<Person>
 
-    // TODO: 2021/8/31 与添加时的bean要为同一个
     @Delete
     fun deletePerson(person: Person)
 

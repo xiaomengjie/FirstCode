@@ -137,4 +137,8 @@
     <string name="map">map</string>
     <string name="switchMap">switchMap</string>
     <string name="room">room</string>
+    <string name="delete_all_data">delete all data</string>
+    <string name="workManager">work manager</string>
+    <string name="doWork">do work</string>
+    <string name="calcelWork">cancel work</string>
 </resources>
