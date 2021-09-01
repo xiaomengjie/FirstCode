@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import com.example.firstcode.chapter14.FirstCodeApplication
 import org.json.JSONArray
 import org.json.JSONObject
 import retrofit2.Call
@@ -25,6 +26,10 @@ fun showToast(context: Context, msg: String){
 
 fun String.toast(context: Context, duration: Int = Toast.LENGTH_SHORT){
     Toast.makeText(context, this, duration).show()
+}
+
+fun String.toast(duration: Int = Toast.LENGTH_SHORT){
+    Toast.makeText(FirstCodeApplication.context, this, duration).show()
 }
 
 operator fun String.times(n: Int) = repeat(n)

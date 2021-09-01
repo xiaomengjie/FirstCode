@@ -21,7 +21,8 @@
         android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FirstCode">
+        android:theme="@style/Theme.FirstCode"
+        android:name=".chapter14.FirstCodeApplication">
         <activity
             android:name=".chapter13.workmanager.WorkManagerActivity"
             android:exported="true" />
@@ -239,7 +240,7 @@
         </provider>
 
         <activity
-            android:name=".chapter13.JetpackPracticeActivity"
+            android:name=".chapter12.MaterialDesignPracticeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
