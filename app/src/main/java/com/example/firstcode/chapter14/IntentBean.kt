@@ -1,7 +1,9 @@
 package com.example.firstcode.chapter14
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -61,4 +63,10 @@ fun intentWithParams(context: Activity){
         putExtra("student", String())
     }
     context.intent.getParcelableExtra<Student>("student")
+}
+
+//判断当前系统是否为深色主题
+fun isDarkTheme(context: Context): Boolean{
+    val flag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+    return flag == Configuration.UI_MODE_NIGHT_YES
 }
