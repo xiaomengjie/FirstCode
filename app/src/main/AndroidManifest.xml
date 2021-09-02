@@ -24,6 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstCode">
         <activity
+            android:name=".chapter15.ui.weather.WeatherActivity"
+            android:exported="true" />
+        <activity
             android:name=".chapter13.workmanager.WorkManagerActivity"
             android:exported="true" />
         <activity
@@ -240,7 +243,7 @@
         </provider>
 
         <activity
-            android:name=".chapter15.WeatherActivity"
+            android:name=".chapter15.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             <intent-filter>
