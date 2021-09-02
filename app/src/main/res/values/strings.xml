@@ -140,5 +140,7 @@
     <string name="delete_all_data">delete all data</string>
     <string name="workManager">work manager</string>
     <string name="doWork">do work</string>
-    <string name="calcelWork">cancel work</string>
+    <string name="cancelWork">cancel work</string>
+    <string name="input_address_hint">输入地址</string>
+    <string name="background">background</string>
 </resources>

@@ -23,7 +23,7 @@ class WorkManagerActivity : BaseAbstractActivity() {
     override fun initButtonBean(): List<ButtonBean> {
         return listOf(
             R.string.doWork to getString(R.string.doWork),
-            R.string.calcelWork to getString(R.string.calcelWork)
+            R.string.cancelWork to getString(R.string.cancelWork)
         )
     }
 
@@ -62,7 +62,7 @@ class WorkManagerActivity : BaseAbstractActivity() {
                 // TODO: 2021/9/1 PeriodicWorkRequest构建周期性后台任务请求，运行周期间隔不能短于15分钟
 //                PeriodicWorkRequest.Builder(SimpleWorker::class.java, 15, TimeUnit.MINUTES).build()
             }
-            R.string.calcelWork -> {
+            R.string.cancelWork -> {
                 // TODO: 2021/9/1 取消后台任务请求
 //                WorkManager.getInstance(this).cancelAllWork()
                 WorkManager.getInstance(this).cancelAllWorkByTag("simple")
