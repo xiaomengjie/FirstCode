@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "FirstCode"
 include ':app'
 include ':customcontentprovider'
+include ':library'
