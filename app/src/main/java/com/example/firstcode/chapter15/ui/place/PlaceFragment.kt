@@ -1,5 +1,6 @@
 package com.example.firstcode.chapter15.ui.place
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.firstcode.chapter15.ui.weather.WeatherActivity
 import com.example.firstcode.databinding.FragmentPlaceBinding
 import com.example.firstcode.other.toast
 
@@ -27,11 +29,22 @@ class PlaceFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (viewModel.isPlaceSaved()){
+            val place = viewModel.getSavedPlace()
+            val intent = Intent(context, WeatherActivity::class.java).apply {
+                putExtra("location_lng", place.location.lng)
+                putExtra("location_lat", place.location.lat)
+                putExtra("place_name", place.name)
+            }
+            startActivity(intent)
+            activity?.finish()
+            return
+        }
         initView()
     }
 
     private fun initView() {
-        adapter = PlaceAdapter(viewModel.placeList)
+        adapter = PlaceAdapter(this, viewModel.placeList)
         viewBinding.recyclerView.layoutManager = LinearLayoutManager(activity)
         viewBinding.recyclerView.adapter = adapter
         viewBinding.searchPlaceEdit.addTextChangedListener{ editable ->

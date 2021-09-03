@@ -1,7 +1,8 @@
 package com.example.firstcode.chapter15.logic
 
-import android.content.Context
 import androidx.lifecycle.liveData
+import com.example.firstcode.chapter15.logic.dao.PlaceDao
+import com.example.firstcode.chapter15.logic.model.Place
 import com.example.firstcode.chapter15.logic.model.Weather
 import com.example.firstcode.chapter15.logic.network.WeatherNetwork
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +43,12 @@ object Repository {
             }
         }
     }
+
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+
+    fun getPlace(): Place = PlaceDao.getSavePlace()
+
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
 
     private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) = liveData(context){
         val result = try {
