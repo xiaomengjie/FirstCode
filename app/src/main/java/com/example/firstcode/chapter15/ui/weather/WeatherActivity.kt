@@ -114,11 +114,12 @@ class WeatherActivity : AppCompatActivity() {
         for (i in 0 until days){
             val skyCon = daily.skycon[i]
             val temperature = daily.temperature[i]
-            val binding = ForecastItemBinding.bind(viewBinding.forecastLayout.forecastLayout)
+            val binding = ForecastItemBinding.inflate(layoutInflater)
             binding.dateInfo.text = simpleDateFormat.format(skyCon.date)
             binding.skyIcon.setImageResource(getSky(skyCon.value).bg)
             binding.skyInfo.text = getSky(skyCon.value).info
             binding.temperatureInfo.text = "${temperature.min.toInt()} ~ ${temperature.max.toInt()}℃"
+            viewBinding.forecastLayout.forecastLayout.addView(binding.root)
         }
 
         val lifeIndex = daily.lifeIndex
