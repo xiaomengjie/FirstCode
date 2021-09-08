@@ -25,7 +25,8 @@
         android:theme="@style/Theme.FirstCode">
         <activity
             android:name=".chapter15.ui.weather.WeatherActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
             android:name=".chapter13.workmanager.WorkManagerActivity"
             android:exported="true" />

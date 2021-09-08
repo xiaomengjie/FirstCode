@@ -34,7 +34,11 @@ class WeatherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: 2021/9/3 0003 深入到状态栏
+        // TODO: 2021/9/3 0003 深入到状态栏，被废弃，需更换
+        val decorView = window.decorView
+        decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+        window.statusBarColor = Color.TRANSPARENT
 
         viewBinding = ActivityWeatherBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
@@ -114,9 +118,9 @@ class WeatherActivity : AppCompatActivity() {
         for (i in 0 until days){
             val skyCon = daily.skycon[i]
             val temperature = daily.temperature[i]
-            val binding = ForecastItemBinding.inflate(layoutInflater)
+            val binding = ForecastItemBinding.inflate(layoutInflater, viewBinding.forecastLayout.forecastLayout, false)
             binding.dateInfo.text = simpleDateFormat.format(skyCon.date)
-            binding.skyIcon.setImageResource(getSky(skyCon.value).bg)
+            binding.skyIcon.setImageResource(getSky(skyCon.value).icon)
             binding.skyInfo.text = getSky(skyCon.value).info
             binding.temperatureInfo.text = "${temperature.min.toInt()} ~ ${temperature.max.toInt()}℃"
             viewBinding.forecastLayout.forecastLayout.addView(binding.root)

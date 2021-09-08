@@ -143,4 +143,6 @@
     <string name="cancelWork">cancel work</string>
     <string name="input_address_hint">输入地址</string>
     <string name="background">background</string>
+    <string name="change_city">change city</string>
+    <string name="delimiter">|</string>
 </resources>
