@@ -1,6 +1,5 @@
 package com.permissionx.xiao
 
-import android.app.Activity
 import androidx.fragment.app.FragmentActivity
 
 object PermissionX {
